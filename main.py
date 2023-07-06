@@ -17,7 +17,7 @@ def start_message(message):
     if check_user:
         products = db.get_all_products()
         print(products)
-        bot.send_message(user_id, 'Добро Пожаловать!', reply_markup=telebot.types.ReplyKeyboardRemove())
+        bot.send_message(user_id, 'Добро Пожаловать в мой магазин!', reply_markup=telebot.types.ReplyKeyboardRemove())
         bot.send_message(user_id, 'Выберите пункт меню:', reply_markup=buttons.main_menu_buttons(products))
     else:
         bot.send_message(user_id, 'Здравствуйте запишите ваше имя:')
